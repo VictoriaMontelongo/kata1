@@ -11,25 +11,25 @@ public class Person {
     private final String name;
     private final LocalDate bday;
     
-    
     public Person(String name, LocalDate bday){
         this.name = name;
         this.bday = bday;
     }
+    
     public String getName(){
         return name;
+    
     }
     
-    public LocalDate getBday(){
+    public LocatDate bday(){
         return bday;
     }
     
     public int getAge(){
-        return toYears(LocalDate.now().toEpochDay() - bday.toEpochDay());
+        return toYears(LocalDate.now().toEpochDay()- bday.toEpochDay());
     }
     
     public int toYears(long days){
         return (int) days/365;
-                
     }
 }
