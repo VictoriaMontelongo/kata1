@@ -15,13 +15,12 @@ public class Person {
         this.name = name;
         this.bday = bday;
     }
-    
+
     public String getName(){
         return name;
-    
     }
-    
-    public LocatDate bday(){
+
+    public LocalDate getBday() {
         return bday;
     }
     
@@ -29,7 +28,8 @@ public class Person {
         return toYears(LocalDate.now().toEpochDay()- bday.toEpochDay());
     }
     
-    public int toYears(long days){
+    public int toYears( long days){
         return (int) days/365;
     }
+        
 }
